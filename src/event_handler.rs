@@ -865,6 +865,7 @@ impl MultiPurposeKeyState {
         let press = match self.alone_timeout_at {
             Some(_) => {
                 self.alone_timeout_at = None;
+                self.held_down = true;
                 true
             }
             None => {
